@@ -3,21 +3,26 @@ Github repo: https://github.com/webdevmatics/webmall
 Tempate:
 https://themehunt.com/item/1527339-ezone-free-multipurpose-ecommerce-bootstrap4-template
 
+## 1. Create laravel project
+    > composer create-project laravel/laravel webmall
 
-# php artisan make:auth in laravel 6.0
+   2. Install dev dependencies
 
-1. It's removed
-   > php artisan make:auth
+    > npm install <-- it will install all dev dependencies
+    > npm run dev <-- it will compile all css and js
 
-2. The new way
-   > composer require laravel/ui
-   > php artisan ui vue --auth
+## 2. Create Authenticated user
 
-# To install all
-   > npm install <-- it will install all dev dependencies
-   > npm run dev <-- it will compile all css and js
+    How to php artisan make:auth in laravel 6.0
 
-# Create products table
+    1. It's removed
+       > php artisan make:auth
+
+    2. The new way
+       > composer require laravel/ui
+       > php artisan ui vue --auth
+
+## 3. Create products table
 
     1. Create product model
 
@@ -49,7 +54,38 @@ https://themehunt.com/item/1527339-ezone-free-multipurpose-ecommerce-bootstrap4-
     3. Create product table in db
     > php artisan migrate
 
-# Create dummy data for products
+## 4. Create dummy data for products
+
+    1. Create product model with -a flag
+        > php artisan make:model Product -a
+
+    2. Create product factory
+        > database/factory/ProductFactory.php
+
+    3. Create product seeds
+        > database/seeds/ProductSeeder.php
+
+    4. Create db seeder
+        > database/seeds/DatabaseSeeder.php
+
+## 5. Loading product from db to homepage
+
+    1. Create default home route
+        > routes/web.php
+
+    2. Use ProductController to get data from db
+        > ProductController.php
+
+    3. Disply products to homepage
+        > resources/views/home.blade.phh <-- loop the data from ProductController
+
+## 6. Shoping cart
+
+    1. Create CartController
+        > php artisan make:controller CartController
+
+    2. Create route for add to cart
+        > web.php
 
 
 
