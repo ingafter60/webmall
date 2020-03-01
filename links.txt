@@ -1,0 +1,18 @@
+Github repo: https://github.com/webdevmatics/webmall
+
+Tempate:
+https://themehunt.com/item/1527339-ezone-free-multipurpose-ecommerce-bootstrap4-template
+
+
+# php artisan make:auth in laravel 6.0
+
+1. It's removed
+   > php artisan make:auth
+
+2. The new way
+   > composer require laravel/ui
+   > php artisan ui vue --auth
+
+# To install all
+   > npm install <-- it will install all dev dependencies
+   > npm run dev <-- it will compile all css and js
