@@ -16,3 +16,38 @@ https://themehunt.com/item/1527339-ezone-free-multipurpose-ecommerce-bootstrap4-
 # To install all
    > npm install <-- it will install all dev dependencies
    > npm run dev <-- it will compile all css and js
+
+# Create products table
+
+    1. Create product model
+
+    > php artisan make:model Product -h <-- to see the availables command
+    > php artisan make:model Project -a <-- it will create everything
+    ...
+    K:\laragon\www\webmall (master)
+    λ php artisan make:model Product -a
+    Model created successfully.
+    Factory created successfully.
+    Created Migration: 2020_03_01_044450_create_products_table
+    Seeder created successfully.
+    Controller created successfully.
+
+    2. Create product fields
+    ...
+    public function up()
+    {
+        Schema::create('products', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('description');
+            $table->float('price');
+            $table->string('cover_img')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    3. Create product table in db
+    > php artisan migrate
+
+
+
