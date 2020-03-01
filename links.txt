@@ -49,5 +49,8 @@ https://themehunt.com/item/1527339-ezone-free-multipurpose-ecommerce-bootstrap4-
     3. Create product table in db
     > php artisan migrate
 
+# Create dummy data for products
+
+
 
 
